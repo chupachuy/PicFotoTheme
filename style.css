@@ -1,0 +1,178 @@
+/*
+Theme Name:   Pic Foto
+Theme URI:    https://www.picfoto.mx/
+Description:  Plantilla HTML para PicFoto
+Author:       Jesús López Velázquez
+Author URI:   http://eltacoweb.com
+Template:     blossom-shop
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  blossom-shop
+*/
+
+/*----------------- Cambios a partir de aquí -------------------------------*/
+
+
+section{
+	margin: 3rem auto;
+}
+
+
+.footer-content{
+	min-width: 100%;
+	background-color: #334b6f;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	font-size: 80%;
+}
+
+
+.footer-content h3{
+	color: #fff;
+	font-size: 120%;
+}
+
+
+.item-footer{
+	padding: 2rem;
+	max-width: 20%;
+	min-width: 220px;
+}
+
+.item-footer ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.item-footer a {
+	color: #fff;
+}
+
+.item-footer button{
+	background: none;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    display: inline-block;
+    border: 1px solid;
+    padding: 15px 30px;
+    margin-top: .7rem;
+}
+
+/** BANNER **/
+
+.banner{
+	height: 50vh;
+	background-image: url('images/banner.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 6%;
+}
+
+
+.banner .container{
+	min-height: 80%;
+	background-color: rgba(255, 255, 255, .75);
+	display: flex;
+}
+
+.text-banner{
+	padding: 17px;
+}
+
+
+/*** CATEGORIAS **/
+
+.categorias{
+	display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+	
+}
+.categorias .card{
+	border: solid #999 thin;
+	width: 90%;
+	margin: 20px 20px;
+}
+
+.card{
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.title-categorie{
+	background-color: rgba(255, 255, 255, .70);
+	display: block;
+	width: 100%;
+	padding: 7px;
+}
+
+.card h3{
+	font-size: 90%;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+
+/** BREAK POINTS ***/
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+	.categorias .card{
+	width: 49%;
+
+}
+
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.categorias .card{
+	width:30%;
+
+}
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+	.categorias{
+		max-width: 90%;
+	}
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+
+
+
