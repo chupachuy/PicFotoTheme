@@ -33,6 +33,10 @@
          <button type="submit" class="btn-readmore">SUSCRIBIRSE</button>
       </div>
    </div>
+   <div class="container text-center">
+      <p><i class="fa-brands fa-cc-paypal fa-2x"></i><i class="fa-brands fa-cc-visa fa-2x"></i><i class="fa-brands fa-cc-mastercard fa-2x"></i><i class="fa-brands fa-cc-amex fa-2x"></i> <i class="fa-brands fa-cc-stripe fa-2x"></i><i class="fa-brands fa-cc-discover fa-2x"></i></p>
+      <p><stronG>Pic Foto</strong> <?php echo Date('Y'); ?> Todos los derechos reservados | Developed by: <strong>Jesús López Velázquez</strong> & <strong>Liliana Esquivel Rivera</strong></p>
+   </div>
 </footer>
 
 
