@@ -39,6 +39,34 @@
    </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="<?php bloginfo('stylesheet_directory'); ?>/js/owl.carousel.min.js"></script>
+
+<script type="text/javascript">
+   $(document).ready(function(){
+     $('.owl-carousel').owlCarousel({
+          // Here goes default configs
+         margin: 14,
+          responsive : {
+            // breakpoint from 0 up
+            0 : {
+              stagePadding: 0,
+              loop: false,
+              responsiveClass: true,
+              dots: false,
+              nav: true,
+              autoHeight: true,
+              items: 1
+            },
+            // breakpoint from 768 up
+            768 : {
+              items: 4
+            }
+          }
+        });
+   });
+</script>
+
 
 
 <?php wp_footer(); ?>
