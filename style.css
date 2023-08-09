@@ -84,6 +84,19 @@ section{
 	padding: 17px;
 }
 
+/*** TIENDA **/
+
+.woocommerce-page .site-content > .page-header.has-bgimg {
+
+    min-height: 200px;
+    background-position: center;
+
+}
+
+.woocommerce-page .site-content > .page-header.has-bgimg .page-title {
+    text-align: center;
+}
+
 /*** CATEGORIAS **/
 
 .categorias{
@@ -93,7 +106,7 @@ section{
     align-items: center;
     width: 100%;
     margin: auto;
-	
+	text-align: center;
 }
 .categorias .card{
 	border: solid #999 thin;
@@ -201,7 +214,41 @@ section{
 	margin: 0 .5rem;
 }
 
+/** OWL **/
 
+.owl-carousel .owl-nav button.owl-next {
+	background-image: url('images/next.png') !important;
+	background-repeat: no-repeat !important;
+    width: 30px;
+    height: 42px;
+    top: 43%;
+}
+
+
+.owl-carousel .owl-nav button.owl-next:hover {
+	background-image: url('images/next.png');
+    width: 30px;
+    height: 42px;
+    top: 43%;
+}
+
+
+.owl-carousel .owl-nav button.owl-prev {
+	background-image: url('images/prev.png') !important;
+	background-repeat: no-repeat !important;
+    width: 30px;
+    height: 42px;
+    top: 45%;
+    
+}
+
+
+.owl-carousel .owl-nav button.owl-prev:hover {
+	background-image: url('images/prev.png');
+    width: 30px;
+    height: 42px;
+    top: 45%;
+}
 /** BREAK POINTS ***/
 
 /* Small devices (landscape phones, 576px and up) */
@@ -245,6 +292,24 @@ section{
 @media (min-width: 992px) {
 	.footer-content{
 		width: 90%;
+	}
+	.owl-carousel .owl-nav button.owl-next {
+    	top: 35%;
+	}
+
+
+	.owl-carousel .owl-nav button.owl-next:hover {
+	    top: 35%;
+	}
+
+
+	.owl-carousel .owl-nav button.owl-prev {
+	    top: 35%;
+	}
+
+
+	.owl-carousel .owl-nav button.owl-prev:hover {
+	    top: 35%;
 	}
 
 }

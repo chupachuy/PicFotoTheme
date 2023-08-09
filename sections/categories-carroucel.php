@@ -1,4 +1,4 @@
-<section>
+<section class="bsp-style-one">
 	<div class="main-title text-center">
 			<h3>Categorías</h3>
 	</div>

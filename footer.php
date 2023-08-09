@@ -1,4 +1,10 @@
+<?php
 
+
+do_action( 'blossom_shop_before_footer' );
+
+
+?>
 <footer class="footer-picfoto">
    <div class="container footer-content">
       <div class="item-footer">
@@ -12,8 +18,8 @@
          <ul>
             <li><a href="">Quienes somos</a></li>
             <li><a href="">Contáctanos</a></li>
-            <li><a href="">Términos y condiciones</a></li>
-            <li><a href="">Aviso de privacidad</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/terminos-y-condiciones">Términos y condiciones</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/politica-privacidad">Política de privacidad</a></li>
             
          </ul>
       </div>
@@ -47,6 +53,9 @@
      $('.owl-carousel').owlCarousel({
           // Here goes default configs
          margin: 14,
+         nav:true,
+         loop: true,
+         navText: ["<div class='siguiente'>‹</div>", "<div class='atras'>›</div>"],
           responsive : {
             // breakpoint from 0 up
             0 : {
