@@ -21,6 +21,9 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
+				foreach( $home_sections as $section ){
+			        get_template_part( 'sections/' . esc_attr( $section ) );  
+			    }
 
 				/**
                  * Comment Template

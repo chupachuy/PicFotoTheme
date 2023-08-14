@@ -13,6 +13,7 @@ get_header();
         /*get_template_part( 'sections/categorias' );*/
         get_template_part( 'sections/categories-carroucel' );
         get_template_part( 'sections/fotografos' );
+        get_template_part( 'sections/youtube-videos' );
 
 
     echo '</div>';

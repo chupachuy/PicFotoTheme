@@ -219,7 +219,7 @@ section{
 .owl-carousel .owl-nav button.owl-next {
 	background-image: url('images/next.png') !important;
 	background-repeat: no-repeat !important;
-    width: 30px;
+    width: 15px;
     height: 42px;
     top: 43%;
 }
@@ -227,7 +227,7 @@ section{
 
 .owl-carousel .owl-nav button.owl-next:hover {
 	background-image: url('images/next.png');
-    width: 30px;
+    width: 15px;
     height: 42px;
     top: 43%;
 }
@@ -236,7 +236,7 @@ section{
 .owl-carousel .owl-nav button.owl-prev {
 	background-image: url('images/prev.png') !important;
 	background-repeat: no-repeat !important;
-    width: 30px;
+    width: 15px;
     height: 42px;
     top: 45%;
     
@@ -245,7 +245,7 @@ section{
 
 .owl-carousel .owl-nav button.owl-prev:hover {
 	background-image: url('images/prev.png');
-    width: 30px;
+    width: 15px;
     height: 42px;
     top: 45%;
 }
@@ -286,6 +286,34 @@ section{
 	}
 	
 
+}
+
+/** Videos youtube **/
+
+.videos-youtube{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.videos-youtube .video-item{
+	min-width: 90%;
+	
+}
+
+@media (min-width: 480px){
+	.videos-youtube .video-item{
+		max-width: 18%;
+	}
+
+}
+
+@media (min-width: 769px){
+	.videos-youtube .video-item{
+		min-width: 23%;
+	}
 }
 
 /* Large devices (desktops, 992px and up) */
