@@ -11,7 +11,7 @@
         <div class="photographer-info text-center">
           <h3>Liliana Esquivel Rivera</h3>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat itaque repudiandae voluptate.</p>
-          <a href="#" class="btn-readmore">MAS INFORMACIÓN</a>
+          <a href="<?php bloginfo('url'); ?>/liliana-esquivel-rivera" class="btn-leermas">MAS INFORMACIÓN</a>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
         <div class="photographer-info text-center">
           <h3>Jesus Lopez Velazquez</h3>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat itaque repudiandae voluptate.</p>
-          <a href="#" class="btn-readmore">MAS INFORMACIÓN</a>
+          <a href="<?php bloginfo('url'); ?>/jesus-lopez-velazquez" class="btn-leermas">MAS INFORMACIÓN</a>
         </div>
       </div>
     </div>

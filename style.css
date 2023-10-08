@@ -32,8 +32,7 @@ section{
 	margin: 20px auto;
 }
 
-
-.btn-readmore{
+.btn-leermas{
 	display: inline-block;
     background-color: #202020;
     border: none;
@@ -50,12 +49,15 @@ section{
     transition: all ease 0.35s;
 }
 
-.btn-readmore:hover{
+.btn-leermas:hover{
 	color: #0000;
 	background-color: #ffffff;
 	border: solid 1px #000;
 	color: #000000;
 }
+
+
+
 
 /** BANNER **/
 
@@ -98,6 +100,12 @@ section{
 }
 
 /*** CATEGORIAS **/
+
+.site-content > .page-header {
+    background: #f7f7f7;
+    text-align: center;
+    padding: 30px 0;
+}
 
 .categorias{
 	display: flex;
@@ -363,3 +371,20 @@ section{
 
 
 
+.btn-ask-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    border: none;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 0.7em;
+    border-radius: 0;
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.btn-ask-whatsapp a{
+	color: #fff !important;
+	text-decoration: none;
+}
