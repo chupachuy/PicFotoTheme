@@ -59,6 +59,12 @@ section{
 
 /** product_custom_field ***/
 
+.woocommerce div.product form.cart .variations label {
+    font-weight: 700;
+    text-align: left;
+    color: black;
+}
+
 .product_custom_field{
 	margin: 2rem 0;
 	
@@ -75,8 +81,7 @@ clear: both;}
 }
 
 .price-disclaimer .price-disclaimer-int{
-	line-height: .3rem;
-	font-size: 1rem;
+	font-size: 16px;
 }
 
 /** BANNER **/
