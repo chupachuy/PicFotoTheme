@@ -57,7 +57,27 @@ section{
 }
 
 
+/** product_custom_field ***/
 
+.product_custom_field{
+	margin: 2rem 0;
+	
+}
+
+.quantity{
+	margin-bottom: 3rem;
+clear: both;}
+
+.price-disclaimer{
+	padding-top: 1rem;
+	clear: both;
+
+}
+
+.price-disclaimer .price-disclaimer-int{
+	line-height: .3rem;
+	font-size: 1rem;
+}
 
 /** BANNER **/
 

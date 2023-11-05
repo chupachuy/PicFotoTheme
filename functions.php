@@ -40,3 +40,43 @@ function dcms_question_whatsapp(){
 
     echo '<div class="dc-whatsapp-container">'. $link. '</div>';
 };
+
+/*** HOOK PARA DESCRIPCION ALETERNA A PRODUCTOS **/
+
+// Display Fields
+add_action('woocommerce_product_options_general_product_data', 'woocommerce_product_custom_fields');
+// Save Fields
+add_action('woocommerce_process_product_meta', 'woocommerce_product_custom_fields_save');
+function woocommerce_product_custom_fields()
+{
+    global $woocommerce, $post;
+    
+    // Custom Product Text Field
+    //Custom Product  Textarea
+    woocommerce_wp_textarea_input(
+        array(
+            'id' => '_custom_product_textarea',
+            'placeholder' => 'Instrucciones para enviar Fotos',
+            'label' => __('Custom Product Textarea', 'woocommerce')
+        )
+    );
+   
+}
+
+
+function woocommerce_product_custom_fields_save($post_id)
+{
+// Custom Product Textarea Field
+    $woocommerce_custom_procut_textarea = $_POST['_custom_product_textarea'];
+    if (!empty($woocommerce_custom_procut_textarea))
+        update_post_meta($post_id, '_custom_product_textarea', esc_html($woocommerce_custom_procut_textarea));
+}
+
+// Right column
+add_action('woocommerce_after_add_to_cart_button','cmk_additional_button');
+function cmk_additional_button() {
+    echo '<div class="price-disclaimer"><div class="price-disclaimer-int"><p>* Precios sujetos a cambio sin previo aviso</p><p>* Estos precios no incluye costos por retoque, ajuste, diseño o manipulación de imágenes</p></div></div>';
+}
+
+
+
