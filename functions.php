@@ -11,6 +11,65 @@
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 
+/** CUSTOM POST TYPE VIDEO YOUTUBE ***/
+
+function videos() {
+
+    $labels = array(
+        'name'                  => _x( 'Videos', 'Post Type General Name', 'text_domain' ),
+        'singular_name'         => _x( 'Video', 'Post Type Singular Name', 'text_domain' ),
+        'menu_name'             => __( 'Videos', 'text_domain' ),
+        'name_admin_bar'        => __( 'Videos', 'text_domain' ),
+        'archives'              => __( 'Archivo de videones', 'text_domain' ),
+        'attributes'            => __( 'Item Attributes', 'text_domain' ),
+        'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
+        'all_items'             => __( 'All Items', 'text_domain' ),
+        'add_new_item'          => __( 'Add New Item', 'text_domain' ),
+        'add_new'               => __( 'Agregar Video', 'text_domain' ),
+        'new_item'              => __( 'Nueva Video', 'text_domain' ),
+        'edit_item'             => __( 'Editar Video', 'text_domain' ),
+        'update_item'           => __( 'Actualizar Video', 'text_domain' ),
+        'view_item'             => __( 'Ver Video', 'text_domain' ),
+        'view_items'            => __( 'Ver Videos', 'text_domain' ),
+        'search_items'          => __( 'buscar Videos', 'text_domain' ),
+        'not_found'             => __( 'Not found', 'text_domain' ),
+        'not_found_in_trash'    => __( 'Not found in Trash', 'text_domain' ),
+        'featured_video'        => __( 'Featured Image', 'text_domain' ),
+        'set_featured_video'    => __( 'Set featured video', 'text_domain' ),
+        'remove_featured_video' => __( 'Remove featured video', 'text_domain' ),
+        'use_featured_video'    => __( 'Use as featured video', 'text_domain' ),
+        'insert_into_item'      => __( 'Insert into item', 'text_domain' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this item', 'text_domain' ),
+        'items_list'            => __( 'Items list', 'text_domain' ),
+        'items_list_navigation' => __( 'Items list navigation', 'text_domain' ),
+        'filter_items_list'     => __( 'Filter items list', 'text_domain' ),
+    );
+    $args = array(
+        'label'                 => __( 'Video', 'text_domain' ),
+        'description'           => __( 'Galeria de Videos', 'text_domain' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' , 'excerpt'),
+        'taxonomies'            => array( 'category', 'post_tag' ),
+        'menu_icon'             => 'dashicons-video-alt3',
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_position'         => 5,
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => true,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'post',
+    );
+    register_post_type( 'video', $args );
+
+}
+add_action( 'init', 'videos', 0 );
+
+
 //Cambiamos el logo
 add_action( 'login_enqueue_scripts', 'bs_change_login_logo' );
 function bs_change_login_logo() { ?> 
@@ -77,6 +136,33 @@ add_action('woocommerce_after_add_to_cart_button','cmk_additional_button');
 function cmk_additional_button() {
     echo '<div class="price-disclaimer"><div class="price-disclaimer-int"><p>* Precios sujetos a cambio sin previo aviso</p><p>* Estos precios no incluye costos por retoque, ajuste, diseño o manipulación de imágenes</p></div></div>';
 }
+
+/* Agregar texto para revisar bandeja de entrada
+
+add_action('woocommerce_before_thankyou', 'dcms_before_thankyou',10,1);
+function dcms_before_thankyou(){
+    echo "<h3> Revisa tu entrada de correo no deseado.</h3>";
+} */
+
+/*** MOSTRAR IMAGEN DE COMPRA **/
+function dl_add_images_woocommerce_emails( $output, $order ) {
+ 
+ static $run = 0;
+ 
+ if ( $run ) {
+ return $output;
+ }
+ 
+ $args = array(
+ 'show_image' => true,
+ 'image_size' => array( 80, 80 ),
+ );
+ 
+ $run++;
+ 
+ return wc_get_email_order_items( $order, $args );
+}
+add_filter( 'woocommerce_email_order_items_table', 'dl_add_images_woocommerce_emails', 10, 2 );
 
 
 

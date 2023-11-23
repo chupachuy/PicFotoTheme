@@ -336,6 +336,19 @@ clear: both;}
 	
 }
 
+.ellipse {
+          white-space: nowrap;
+          display:inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+       }
+      .two-lines {
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          white-space: normal;
+      }
+
 @media (min-width: 480px){
 	.videos-youtube .video-item{
 		max-width: 18%;
@@ -412,4 +425,13 @@ clear: both;}
 .btn-ask-whatsapp a{
 	color: #fff !important;
 	text-decoration: none;
+}
+.info {
+    background: #dde9ed;
+    color: #000000;
+    font-size: 0.7em;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem;
 }

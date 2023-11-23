@@ -14,6 +14,7 @@ get_header();
         get_template_part( 'sections/categories-carroucel' );
         get_template_part( 'sections/fotografos' );
         get_template_part( 'sections/youtube-videos' );
+        get_template_part( 'sections/blog');
 
 
     echo '</div>';
