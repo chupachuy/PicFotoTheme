@@ -8,7 +8,7 @@
 				<h3>PHOTOBOOKS</h3>
 			</div>
 		</div></a>
-		<a href="<?php bloginfo('url'); ?>/categoria-producto/minibooks"><div class="card" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/IMG_85151.jpg');">
+		<a href="<?php bloginfo('url'); ?>/categoria-producto/mini-books/"><div class="card" style="background-image: url('<?php bloginfo('stylesheet_directory'); ?>/images/minis.jpg');">
 			<div class="title-categorie">
 				<h3>MINIBOOKS</h3>
 			</div>

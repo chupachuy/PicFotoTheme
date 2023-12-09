@@ -56,6 +56,14 @@ section{
 	color: #000000;
 }
 
+.social-photographers a{
+	color: #000;
+	margin: .3rem;
+}
+
+.social-photographers i{
+}
+
 
 /** product_custom_field ***/
 
@@ -170,6 +178,16 @@ clear: both;}
 	font-weight: 900;
 	text-transform: uppercase;
 }
+
+/** HACK PARA LAS MINIATURAS WOOCOMMERCE **/
+.woocommerce div.product div.images .flex-control-thumbs li {
+    width: 25% !important;
+    float: left !important;
+    padding: 2px !important;
+    margin: 0;
+    list-style: none;
+}
+/** HACK PARA LAS MINIATURAS WOOCOMMERCE **/
 
 
 /** PHOTHOGRAPHERS **/

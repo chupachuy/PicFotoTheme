@@ -17,7 +17,7 @@ $image_size = ( $ed_crop_all ) ? 'full' : 'blossom-shop-blog-list';
 $args = array(
     'post_type'           => 'post',
     'posts_per_page'      => 3,
-    'category__in' => array(22),
+    'category__in' => array(465),
     'ignore_sticky_posts' => true
 );
 
@@ -29,9 +29,9 @@ if( $sec_title || $sub_title || $qry->have_posts() ){ ?>
 	<div class="container">
 
         <div class="title-wrap">
-            <h2 class="section-title">Noticias de interes</h2>
+            <h2 class="section-title">BLOG</h2>
             <div class="section-desc">
-                <p>Nuestros recientes artículos sobre productos de ideas de moda.</p>
+                <!--<p>Nuestros recientes artículos sobre productos de ideas de moda.</p>-->
             </div>
         </div>
         

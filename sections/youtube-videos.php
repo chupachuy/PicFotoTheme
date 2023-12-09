@@ -16,9 +16,9 @@
           	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			<div class="video-item">
 				<iframe width="90%" height="200" src="https://www.youtube.com/embed/<?php the_field('video_youtube'); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-				<div class="ellipse two-lines mt-2">
+				<!--<div class="ellipse two-lines mt-2">
 					<?php the_excerpt(); ?>
-				</div>
+				</div>-->
 			</div>
 			<?php endwhile; ?>
 	          <?php wp_reset_postdata(); ?>

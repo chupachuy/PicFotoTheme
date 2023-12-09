@@ -16,8 +16,8 @@ do_action( 'blossom_shop_before_footer' );
       <div class="item-footer">
          <h3>AYUDA</h3>
          <ul>
-            <li><a href="">Quienes somos</a></li>
-            <li><a href="">Contáctanos</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/quienes-somos">Quienes somos</a></li>
+            <li><a href="<?php bloginfo('url'); ?>/contactanos">Contáctanos</a></li>
             <li><a href="<?php bloginfo('url'); ?>/terminos-y-condiciones">Términos y condiciones</a></li>
             <li><a href="<?php bloginfo('url'); ?>/politica-privacidad">Política de privacidad</a></li>
             
@@ -26,18 +26,13 @@ do_action( 'blossom_shop_before_footer' );
       <div class="item-footer">
          <h3>SIGUENOS</h3>
          <ul>
-            <li><a href=""><i class="fa-brands fa-facebook fa-2x"></i> Faceook</a></li>
-            <li><a href=""><i class="fa-brands fa-twitter fa-2x"></i> Twitter</a></li>
-            <li><a href=""><i class="fa-brands fa-instagram fa-2x"></i> Instagram</a></li>
-            <li><a href=""><i class="fa-brands fa-youtube fa-2x"></i> Youtube</a></li>
+            <li><a href="https://www.facebook.com/p/Pic-Foto-100060918555426/?locale=es_LA"><i class="fa-brands fa-facebook fa-2x"></i> Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@picfotomx"><i class="fa-brands fa-tiktok fa-2x"></i> TikTok</a></li>
+            <li><a href="https://www.instagram.com/picfotomx/?hl=es-la"><i class="fa-brands fa-instagram fa-2x"></i> Instagram</a></li>
+            <li><a href="https://www.youtube.com/@picfoto9813"><i class="fa-brands fa-youtube fa-2x"></i> Youtube</a></li>
          </ul>
       </div>
-      <div class="item-footer">
-         <h3>NEWSLETTER</h3>
-         <p>Recibe noticias de nuestros productos</p>
-         <input type="text" class="form-control" placeholder="Ingresa tu Email">
-         <button type="submit" class="btn-readmore">SUSCRIBIRSE</button>
-      </div>
+      
    </div>
    <div class="container text-center">
       <p><i class="fa-brands fa-cc-paypal fa-2x"></i><i class="fa-brands fa-cc-visa fa-2x"></i><i class="fa-brands fa-cc-mastercard fa-2x"></i><i class="fa-brands fa-cc-amex fa-2x"></i> <i class="fa-brands fa-cc-stripe fa-2x"></i><i class="fa-brands fa-cc-discover fa-2x"></i></p>

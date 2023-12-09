@@ -40,7 +40,19 @@ defined( 'ABSPATH' ) || exit;
 		<?php else : ?>
 
 			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<p class="info">¡Gracias por su preferencia y confianza! En breve nos pondremos en contacto para darle seguimiento a su pedido. Su comprobante será enviado al correo registrado, <?php echo $order->get_billing_email(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>, favor de checar su bandeja de spam o correo no deseado. </p>
+			<p class="info">¡Gracias por su preferencia y confianza! En breve nos pondremos en contacto para darle seguimiento a su pedido. Su comprobante será enviado al correo registrado, <?php echo $order->get_billing_email(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>, favor de checar su bandeja de spam o correo no deseado. Horaio de atencion lunes a viernes de 9:00 am a 7:00 pm y Sábados de 9:00 am a 5:00 pm</p>
+
+			<div style="margin-top: 20px; margin-bottom: 20px; background-color: #d7a82b; color:#fff; padding: 1rem;">
+			    <p style="color:#fff">Gracias por su compra y por su confianza por favor envíe sus archivos al correo <a href="mailto:miorden@picfoto.mx" style="color:#fff">miorden@picfoto.mx</a> con las siguientes características: </p>
+			    <ul style="color: #fff">
+			        <li>Al tamaño de impresión</li>
+			        <li>300px por pulgada</li>
+			        <li>Formato JPG</li>
+			        <li>Canal de color RGB</li>
+			        <li>Perfil sRGB IEC 61966 2.1</li>
+			    </ul>
+			    <p style="color: #fff">Con tu No. de pedido <strong><?php echo $order->get_order_number(); ?></strong> donde le daremos seguimiento y atención a tu trabajo.</p>
+			</div>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 

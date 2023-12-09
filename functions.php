@@ -88,7 +88,7 @@ background-image: url('https://picfoto.mx/siteRC/wp-content/uploads/2023/08/Logo
 add_action( 'woocommerce_share', 'dcms_question_whatsapp' );
 
 function dcms_question_whatsapp(){
-    $phone = '525568032061';
+    $phone = '525573815149';
     $message = 'Quiero información del producto: '.get_the_title().' en '.get_permalink().' ';
     $text = 'Preguntar por Whatsapp';
     $ico = '<img src="'.get_stylesheet_directory_uri().'/images/whatsaap.png" width=50 height=50 />';
@@ -133,9 +133,27 @@ function woocommerce_product_custom_fields_save($post_id)
 
 // Right column
 add_action('woocommerce_after_add_to_cart_button','cmk_additional_button');
+
 function cmk_additional_button() {
-    echo '<div class="price-disclaimer"><div class="price-disclaimer-int"><p>* Precios sujetos a cambio sin previo aviso</p><p>* Estos precios no incluye costos por retoque, ajuste, diseño o manipulación de imágenes</p></div></div>';
-}
+
+    echo '<div class="price-disclaimer"><div class="price-disclaimer-int">';
+
+    global $product;
+    $product_id = $product->get_id();
+
+    if( has_term( 'adhesivos', 'product_cat', $product_id)){
+        echo '<p>* Precios sujetos a cambio sin previo aviso.</p>';
+    } elseif (has_term( 'papel-fotografico-inkjet', 'product_cat', $product_id)){
+        echo '<p>* Precios sujetos a cambio sin previo aviso.</p>';
+    } elseif(has_term( 'laminados-fotograficos', 'product_cat', $product_id)){
+        echo '<p>* Precios sujetos a cambio sin previo aviso.</p>';
+    } else {
+        echo '<p>* Precios sujetos a cambio sin previo aviso</p><p>* Estos precios no incluye costos por retoque, ajuste, diseño o manipulación de imágenes.</p>';
+    };
+
+
+    echo '</div></div>';
+};
 
 /* Agregar texto para revisar bandeja de entrada
 
