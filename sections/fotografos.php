@@ -29,5 +29,20 @@
         </div>
       </div>
     </div>
+
+    <div class="info-photographer">
+      <div class="item-photographer">
+        <div class="photographer-img">
+          <img src="https://picfoto.mx/wp-content/uploads/2023/12/Alvaro_972A7187-scaled.jpg" alt="Alvaro Balderas Fotografo">
+        </div>
+        <div class="photographer-info text-center">
+          <h3>Alvaro Balderas</h3>
+          <p>Descubre Álvaro Balderas: un visionario en la fotografía de retrato.</p>
+          <a href="<?php bloginfo('url'); ?>/alvaro-balderas/" class="btn-leermas">MAS INFORMACIÓN</a>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </section>
