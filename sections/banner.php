@@ -4,7 +4,7 @@
 			<h1><?php bloginfo('name'); ?></h1>
 			<!--<h2><small><?php bloginfo('description'); ?></small></h2>-->
 			<h2><small><?php bloginfo('description'); ?></small></h2>
-			<button type="submit" class="btn-readmore">MAS INFORMACIÓN</button>
+			<a href="<?php bloginfo('url'); ?>/quienes-somos/" class="btn-leermas">MAS INFORMACIÓN</a>
 		</div>
 		
 	</div>

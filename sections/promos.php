@@ -1,6 +1,6 @@
 <section class="bsp-style-one">
 	<div class="main-title text-center">
-			<h3>Promociones de fin de año</h3>
+			<h3>PICFOTERO<br>¡Estrena nuestra página con 20% DESC. en productos seleccionados!</h3>
 	</div>
 	<div class="owl-carousel">
 	  <!--<a href="<?php bloginfo('url'); ?>/">

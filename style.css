@@ -134,6 +134,78 @@ mark.count {
 	padding: 17px;
 }
 
+/*** DESCARGAS ***/
+
+
+.items-downloads{
+	padding: 10px;
+	height: 180px;
+	text-align: center;
+	 align-items: center;
+	 justify-content: center;
+}
+
+.acrilicos{
+	background-color: #d32c10;
+}
+
+.minibooks{
+	background-color: #655adf;
+}
+.photobooks{
+	background-color: #4078f9;
+}
+
+.cajas-estuches{
+	background-color: #4093f1;
+}
+
+.bastidores{
+	background-color: #f8c342;
+}
+
+.impresiones{
+	background-color: #4db17a;
+}
+
+.laminadoras{
+	background-color: #a2a2a2;
+}
+
+.laminados{
+	background-color: #6f6f6f;
+}
+
+.adhesivos{
+	background-color: #cac8c8;
+}
+
+.papel-inkjet{
+	background-color: #de8f29;
+}
+
+.papel-plotterinkjet{
+	background-color: #5d34a1;
+}
+
+.flexi-glass{
+	background-color: #5aa948;
+}
+
+
+.caballetes{
+	background-color: #3642b1;
+}
+
+
+.acrilicos a, .acrilicos h4, .minibooks a, .minibooks h4, .photobooks a, .photobooks h4, .cajas-estuches a, .cajas-estuches h4, .impresiones a, .impresiones h4, .laminadoras a, .laminadoras h4, .laminados a, .laminados h4, .papel-inkjet a, .papel-inkjet h4, .papel-plotterinkjet a, .papel-plotterinkjet h4, .flexi-glass a, .flexi-glass h4, .caballetes a, .caballetes h4{
+	color: #fff;
+}
+
+.bastidores a, .bastidores h4, .adhesivos a, .adhesivos h4{
+	color: #000;
+}
+
 /*** TIENDA **/
 
 .woocommerce-page .site-content > .page-header.has-bgimg {
