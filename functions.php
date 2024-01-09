@@ -147,6 +147,12 @@ function cmk_additional_button() {
         echo '<p>* Precios sujetos a cambio sin previo aviso.</p>';
     } elseif(has_term( 'laminados-fotograficos', 'product_cat', $product_id)){
         echo '<p>* Precios sujetos a cambio sin previo aviso.</p>';
+    } elseif(has_term( 'impresiones', 'product_cat', $product_id)){
+        /*if($price < 20){
+            echo '<p class="min-price">* Los pedidos menores a $20.00 MN. No se procesaran.</p>';
+        }*/
+        echo '<p class="min-price">* Monto minimo de compra $20.00 MN.</p>';
+        echo '<p>* Precios sujetos a cambio sin previo aviso.</p>';
     } else {
         echo '<p>* Precios sujetos a cambio sin previo aviso</p><p>* Estos precios no incluye costos por retoque, ajuste, diseño o manipulación de imágenes.</p>';
     };
@@ -182,5 +188,36 @@ function dl_add_images_woocommerce_emails( $output, $order ) {
 }
 add_filter( 'woocommerce_email_order_items_table', 'dl_add_images_woocommerce_emails', 10, 2 );
 
+/** Cambiar texto de checkout ***/
+
+add_filter( 'woocommerce_order_button_html', 'dl_cambiar_texto_boton_realizar_pedido');
+function dl_cambiar_texto_boton_realizar_pedido( $button ) {
+
+  // Button text
+  $order_button_text = __('Confirmar pedido', 'woocommerce');
 
 
+  // Markup - add in classes, data attibutes
+  $button = '<input type="submit" class="button alt new-css-class" name="woocommerce_checkout_place_order" id="place_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '"/>';
+
+  return $button;
+
+}
+
+/** CAMBIAR LEVELS DE CHECKPOUT WOOCOMMERCE 
+
+add_filter( 'woocommerce_checkout_fields', 'picfoto_rename_woo_checkout_fields' );
+  
+function picfoto_rename_woo_checkout_fields( $fields ) {
+    $fields['billing']['shipping_address_1']['label'] = 'Calle y número';
+    return $fields;
+}***/
+
+add_filter('gettext',  'translate_text');
+add_filter('ngettext',  'translate_text');
+ 
+function translate_text($translated) {
+     $translated = str_ireplace('Dirección de la calle',  'Calle y número',  $translated);
+     /*$translated = str_ireplace('Bye',  'Adiós',  $translated); */
+     return $translated;
+}
